@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>원형 그라디언트 radial-gradient</title>
+    <style>
+      h1{
+            text-align: center;
+        }
+        #wrapper{
+            list-style: none;
+            padding: 0;
+            background-color: #ededed;
+            font-weight: bold;
+            font-size: 24px;
+            overflow:hidden; /*일반적인 흐름에서 마진상쇄 현상을 해결하기 위해 부모 요소에 작성*/
+        }
+        #wrapper li{
+                border: 1px solid black;
+                width: 80%;
+                min-width: 400px;
+                height: 200px;
+                margin: 20px auto;
+        }
+        .box1{
+            background-image: radial-gradient(maroon,rgba(55,10,150,0.5));
+        }
+        .box2{
+            background-image: radial-gradient(#E9D5DA,#827397,#4D4C7D,#363062);
+        }
+        .box3{
+            background-image: radial-gradient(#AB46D2 20%,#FF6FB5 80%);
+        }
+        .box4{ /*영역의 비율과 상관없이 정원 형태의 그라디언트 생성*/
+            background-image: radial-gradient(circle, #8BDB81,#E7ED9B);
+        }
+        .box5{
+            background-image: radial-gradient(circle, #8BDB81 60%,#E7ED9B 80%);
+        }
+        .box6{
+            /*closest-side at 10% 20% left 10%, top 20% 이동한 곳에서 생성*/
+            background-image: radial-gradient(circle closest-side at 10% 20%, #FDEBF7,#FFADF0);
+        }
+        .box7{
+            background-image: repeating-radial-gradient(#363062,#E9D5DA 60px);
+        }
+        .box8{
+            background-image: repeating-radial-gradient(circle, #363062,#363062 10%,#E9D5DA 10%,#E9D5DA 20%);
+        }
+    </style>
+</head>
+<body>
+    <h1>원형 그라디언트 radial-gradient()</h1>
+    <ul id="wrapper">
+        <li class="box1">radial-gradient(1색상,2색상)</li>
+        <li class="box2">radial-gradient(1색상,2색상,3색상,4색상)</li>
+        <li class="box3">radial-gradient(1색상 위치%,2색상 위치%)</li>
+        <li class="box4">radial-gradient(circle,1색상,2색상) 정 원의 그라디언트</li>
+        <li class="box5">radial-gradient(circle, 1색상위치%,2색상위치%)</li>
+        <li class="box6">radial-gradient(circle closest-side at 위치,1색상,2색상)</li>
+        <li class="box7">repeating-radial-gradient(1색상 %,2색상 %)</li>
+        <li class="box8">repeating-radial-gradient(1색상,2색상)</li>
+    </ul>
+</body>
+</html>

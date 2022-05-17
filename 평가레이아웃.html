@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>화면구현 평가</title>
+    <style>
+        body{
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0px; 
+            overflow: hidden;  
+        }
+        ul li{
+            float: left;
+        }
+        .box{
+            width: 940px;
+            margin: 30px auto;
+             height: 60px;
+             line-height: 60px;
+        }
+        nav{
+            background-color: antiquewhite;
+
+        }
+        nav #gnb{
+            width: 500px;
+            margin: 0px auto;
+            background-color: antiquewhite; 
+        }
+        /*#gnb::after{content:""; display:block; clear:both;}*/
+        nav #gnb li a{
+            display: block;
+            color: inherit;/*상속의 의미*/
+            width: 100px;
+            line-height: 60px;
+        }
+        nav #gnb li a:hover{
+            background-color: aqua;
+        }
+        article{
+          background-color: azure;
+        }
+        footer{
+            background-color: #F9CEEE;
+        }
+        #wrapper li{
+            background-color: #E9D5DA;
+            width: 300px;
+        }
+        #wrapper li:nth-child(2){
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>logo</h1>
+    <nav class="box">
+    <ul id="gnb">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">상품</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">연락처</a></li>
+    </ul>
+</nav>
+    <article class="box">
+        컨텐츠
+    </article>
+    <ul id="wrapper" class="box">
+        <li>1번째열</li>
+        <li>2번째열</li>
+        <li>3번째열</li>
+    </ul>
+    <footer class="box">&copy;copyright 2022</footer>
+</body>
+</html>
